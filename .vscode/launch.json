@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "name": "C#: CustomerManagementAPI [Default Configuration]",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/CustomerManagementAPI.csproj"
+        }
+    ]
+}
