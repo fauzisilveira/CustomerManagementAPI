@@ -1,0 +1,80 @@
+# VCS
+.git
+.gitignore
+
+# Visual Studio / Rider / VS Code
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build outputs (dotnet)
+bin/
+obj/
+**/bin/
+**/obj/
+publish/
+dist/
+
+# NuGet / packages
+packages/
+*.nupkg
+project.lock.json
+.nuget/
+
+# Dotnet artifacts / binaries / debugging files
+*.dll
+*.pdb
+*.exe
+*.mdb
+*.ilk
+
+# Local DB files
+*.mdf
+*.ldf
+*.db
+
+# Logs and temp
+*.log
+logs/
+TestResults/
+tmp/
+temp/
+*.tmp
+
+# Test / coverage
+.vstest/
+coverage/
+*.coverage
+*.coveragexml
+*.trx
+.pytest_cache/
+
+# Configs, secrets and certs
+.env
+.env.*
+appsettings.*.json
+secrets/
+certs/
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+
+# OS and editor metadata
+.DS_Store
+Thumbs.db
+*.sublime-*
+*.swp
+*.lock
+
+# Docker compose local overrides
+docker-compose.override.yml
+docker-compose.*.local.yml
+
+# Keep Docker build files
+!Dockerfile
+!docker-compose.yml

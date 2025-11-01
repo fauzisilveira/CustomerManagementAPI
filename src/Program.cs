@@ -1,3 +1,10 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Linq;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -12,6 +19,11 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
+    // Log the Swagger URL
+    var swaggerUrl = "http://localhost:5000/swagger"; // Adjust for production if needed
+    var logger = app.Services.GetRequiredService<ILogger<Program>>();
+    logger.LogInformation("Swagger UI is available at: {SwaggerUrl}", swaggerUrl);
 }
 
 app.UseHttpsRedirection();

@@ -1,0 +1,13 @@
+services:
+  api:
+    container_name: client-management
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "5000:8080"
+    environment:
+    - ASPNETCORE_ENVIRONMENT=Development
+      
