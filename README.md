@@ -50,7 +50,7 @@ dotnet build
 dotnet run
 ```
 
-> Make sure a SQL Server instance is running locally and update the connection string in `appsettings.json` if necessary.
+> Make sure a SQL Server instance is running locally
 
 ## Contributing
 

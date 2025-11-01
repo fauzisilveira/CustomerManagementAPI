@@ -20,10 +20,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 
-    // Log the Swagger URL
-    var swaggerUrl = "http://localhost:5000/swagger"; // Adjust for production if needed
+    // Log the API and Swagger URL
+    var url = "http://localhost:5000"; // Adjust for production if needed 
+    var swaggerUrl = url + "/swagger";
     var logger = app.Services.GetRequiredService<ILogger<Program>>();
-    logger.LogInformation("Swagger UI is available at: {SwaggerUrl}", swaggerUrl);
+    logger.LogInformation("The API is available at: {url}/endpoint", url);
+    logger.LogInformation("Swagger UI is available at: {swaggerUrl}", swaggerUrl);
 }
 
 app.UseHttpsRedirection();
