@@ -10,5 +10,5 @@ COPY src/ ./src
 # Restore .NET dependencies
 RUN dotnet restore ./src
 
-# Default command to run API
-CMD ["dotnet", "run", "--project", "./src"]
+# Default command to run and watch API
+CMD ["dotnet", "watch", "run", "--project", "./src", "--urls", "http://0.0.0.0:8080"]
